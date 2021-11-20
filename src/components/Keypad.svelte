@@ -1,25 +1,34 @@
 <script>
-    
+    import { createEventDispatcher } from "svelte";
+    const dispatch = createEventDispatcher()
+
+    const HandleValue = (value) => {
+        dispatch('insert-value', value)
+    }
+
+    const HandleReset = () => {
+        dispatch('reset-value')
+    }
 </script>
 
 <section class="grid">
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
+    <button on:click={() => HandleValue(7)}>7</button>
+    <button on:click={() => HandleValue(8)}>8</button>
+    <button on:click={() => HandleValue(9)}>9</button>
     <button class="blue">DEL</button>
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>+</button>
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>-</button>
-    <button>.</button>
-    <button>0</button>
-    <button>/</button>
-    <button>x</button>
-    <button class="large blue">RESET</button>
+    <button on:click={() => HandleValue(4)}>4</button>
+    <button on:click={() => HandleValue(5)}>5</button>
+    <button on:click={() => HandleValue(6)}>6</button>
+    <button on:click={() => HandleValue('+')}>+</button>
+    <button on:click={() => HandleValue(1)}>1</button>
+    <button on:click={() => HandleValue(2)}>2</button>
+    <button on:click={() => HandleValue(3)}>3</button>
+    <button on:click={() => HandleValue('-')}>-</button>
+    <button on:click={() => HandleValue('.')}>.</button>
+    <button on:click={() => HandleValue(0)}>0</button>
+    <button on:click={() => HandleValue('/')}>/</button>
+    <button on:click={() => HandleValue('x')}>&times;</button>
+    <button class="large blue" on:click={() => HandleReset()}>RESET</button>
     <button class="large red">=</button>
 </section>
 

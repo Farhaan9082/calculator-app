@@ -1,9 +1,9 @@
 <script>
-    let console;
+    export let ScreenInput
 </script>
 
 <section>
-    <input class="input__bar" type="text" bind:value={console} readonly="true">
+    <input class="input__bar" type="text" bind:value={ScreenInput} readonly="true">
 </section>
 
 <style>

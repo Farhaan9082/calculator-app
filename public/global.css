@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+/* resets */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+  	box-sizing: border-box;
+}
+
+ol,ul {
+    list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+:root {
+	/* Theme 1 */
+
+	/* Bg */
+	--Very-dark-desaturated-blue: hsl(222, 26%, 31%);
+	--T1-keypad: hsl(223, 31%, 20%);
+	--T1-screen: hsl(224, 36%, 15%);
+
+	/* Keys */
+	--T1-blue: hsl(225, 21%, 49%);
+	--T1-blue-shadow: hsl(224, 28%, 35%);
+	--T1-red: hsl(6, 63%, 50%);
+	--T1-red-shadow: hsl(6, 70%, 34%);
+	--T1-gray: hsl(30, 25%, 89%);
+	--T1-gray-shadow: hsl(28, 16%, 65%);
+
+	/* Text */
+	--T1-text-dark: hsl(221, 14%, 31%);
+	--T1-text-light: hsl(0, 0, 100%);
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 2rem;
+	background-color: var(--Very-dark-desaturated-blue);
+	font-family: 'Spartan', sans-serif;
+	font-weight: 700;
+}

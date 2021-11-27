@@ -6,8 +6,20 @@
         dispatch('insert-value', value)
     }
 
+    const HandlePoint = (value) => {
+        dispatch('insert-point', value)
+    }
+
     const HandleReset = () => {
         dispatch('reset-value')
+    }
+
+    const HandleDelete = () => {
+        dispatch('delete-value')
+    }
+
+    const HandleOutput = () => {
+        dispatch('output-value')
     }
 </script>
 
@@ -15,7 +27,7 @@
     <button on:click={() => HandleValue(7)}>7</button>
     <button on:click={() => HandleValue(8)}>8</button>
     <button on:click={() => HandleValue(9)}>9</button>
-    <button class="blue">DEL</button>
+    <button class="blue" on:click={() => HandleDelete()}>DEL</button>
     <button on:click={() => HandleValue(4)}>4</button>
     <button on:click={() => HandleValue(5)}>5</button>
     <button on:click={() => HandleValue(6)}>6</button>
@@ -24,12 +36,12 @@
     <button on:click={() => HandleValue(2)}>2</button>
     <button on:click={() => HandleValue(3)}>3</button>
     <button on:click={() => HandleValue('-')}>-</button>
-    <button on:click={() => HandleValue('.')}>.</button>
+    <button on:click={() => HandlePoint('.')}>.</button>
     <button on:click={() => HandleValue(0)}>0</button>
     <button on:click={() => HandleValue('/')}>/</button>
-    <button on:click={() => HandleValue('x')}>&times;</button>
+    <button on:click={() => HandleValue('*')}>&times;</button>
     <button class="large blue" on:click={() => HandleReset()}>RESET</button>
-    <button class="large red">=</button>
+    <button class="large red" on:click={() => HandleOutput()}>=</button>
 </section>
 
 <style>
@@ -76,6 +88,16 @@
         .grid {
             grid-gap: 15px;
             padding: 20px;
+        }
+    }
+
+    @media only screen and (max-width: 345px) {
+        button {
+            font-size: 1.1rem;
+        }
+
+        .blue {
+            font-size: 1rem;
         }
     }
 </style>

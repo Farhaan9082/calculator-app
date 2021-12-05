@@ -54,6 +54,14 @@
         border-radius: 8px;
     }
 
+    :global(body.light-mode) .grid {
+        background-color: var(--T2-keypad);
+    }
+
+    :global(body.neon-mode) .grid {
+        background-color: var(--T3-keypad);
+    }
+
     button {
         background-color: var(--T1-gray);
         color: var(--T1-text-dark);
@@ -64,6 +72,18 @@
         cursor: pointer;
         border: none;
         border-bottom: 4px solid var(--T1-gray-shadow);
+    }
+
+    :global(body.light-mode) button {
+        color: var(--T2-text-dark);
+        background-color: var(--T2-gray);
+        border-bottom: 4px solid var(--T2-gray-shadow);
+    }
+
+    :global(body.neon-mode) button {
+        color: var(--T3-text-yellow);
+        background-color: var(--T3-darkvoilet);
+        border-bottom: 4px solid var(--T3-darkvoilet-shadow);
     }
 
     .large {
@@ -77,11 +97,35 @@
         border-bottom: 4px solid var(--T1-blue-shadow);
     }
 
+    :global(body.light-mode) .blue {
+        color: white;
+        background-color: var(--T2-cyan);
+        border-bottom: 4px solid var(--T2-cyan-shadow);
+    }
+
+    :global(body.neon-mode) .blue {
+        color: white;
+        background-color: var(--T3-voilet);
+        border-bottom: 4px solid var(--T3-voilet-shadow);
+    }
+
     .red {
         font-size: 1.2rem;
         color: white;
         background-color: var(--T1-red);
         border-bottom: 4px solid var(--T1-red-shadow);
+    }
+
+    :global(body.light-mode) .red {
+        color: white;
+        background-color: var(--T2-orange);
+        border-bottom: 4px solid var(--T2-orange-shadow);
+    }
+
+    :global(body.neon-mode) .red {
+        color: var(--T3-text-dark);
+        background-color: var(--T3-cyan);
+        border-bottom: 4px solid var(--T3-cyan-shadow);
     }
 
     @media only screen and (max-width: 425px) {

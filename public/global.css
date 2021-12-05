@@ -43,6 +43,44 @@ select {
 	/* Text */
 	--T1-text-dark: hsl(221, 14%, 31%);
 	--T1-text-light: hsl(0, 0, 100%);
+
+	/* Theme 2 */
+
+	/* Bg */
+	--T2-main: hsl(0, 0%, 90%);
+	--T2-keypad: hsl(0, 5%, 81%);
+	--T2-screen: hsl(0, 0%, 93%);
+
+	/* Keys */
+	--T2-cyan: hsl(185, 42%, 37%);
+	--T2-cyan-shadow: hsl(185, 58%, 25%);
+	--T2-orange: hsl(25, 98%, 40%);
+	--T2-orange-shadow: hsl(25, 99%, 27%);
+	--T2-gray: hsl(45, 7%, 89%);
+	--T2-gray-shadow: hsl(35, 11%, 61%);
+
+	/* Text */
+	--T2-text-dark: hsl(60, 10%, 19%);
+	--T2-text-light: hsl(0, 0, 100%);
+
+	/* Theme 3 */
+
+	/* Bg */
+	--T3-main: hsl(268, 75%, 9%);
+	--T3-keypad: hsl(268, 71%, 12%);
+
+	/* Keys */
+	--T3-voilet: hsl(281, 89%, 26%);
+	--T3-voilet-shadow: hsl(285, 91%, 52%);
+	--T3-cyan: hsl(176, 100%, 44%);
+	--T3-cyan-shadow: hsl(177, 92%, 70%);
+	--T3-darkvoilet: hsl(268, 47%, 21%);
+	--T3-darkvoilet-shadow: hsl(290, 70%, 36%);
+
+	/* Text */
+	--T3-text-yellow: hsl(52, 100%, 62%);
+	--T3-text-dark: hsl(198, 20%, 13%);
+	--T3-text-light: hsl(0, 0, 100%);
 }
 
 body {
@@ -51,7 +89,10 @@ body {
 	justify-content: center;
 	align-items: center;
 	padding: 0 2rem;
-	background-color: var(--Very-dark-desaturated-blue);
 	font-family: 'Spartan', sans-serif;
 	font-weight: 700;
+}
+
+.theme-two {
+	background-color: var(--T2-main);
 }

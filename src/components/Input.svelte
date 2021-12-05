@@ -22,4 +22,14 @@
         color: white;
         border-radius: 8px;
     }
+
+    :global(body.light-mode) .input__bar {
+        background-color: var(--T2-screen);
+        color: var(--T2-text-dark);
+    }
+
+    :global(body.neon-mode) .input__bar {
+        background-color: var(--T3-keypad);
+        color: var(--T3-text-yellow);
+    }
 </style>
